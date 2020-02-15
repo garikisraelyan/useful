@@ -1,4 +1,4 @@
-bank_account = 6000
+bank_account = 5000
 
 user_inputed_price = int(input("Enter the price of the item: "))
 
