@@ -28,21 +28,23 @@ my_dict = {"x": [],
 # my_dict["y"] = list(range(21, 30))
 # my_dict["z"] = list(range(31, 40))
 
-try:
-    user_input = input("Enter a range which contains 9 elements: ")
+while True:
+    try:
+        user_input = input("Enter a range which contains 9 elements: ")
 
-    a = 0
-    if "_" in user_input:
-        a = user_input.index("_")
+        a = 0
+        if "_" in user_input:
+            a = user_input.index("_")
 
-    first_element = int(user_input[:a])
-    second_element = int(user_input[a+1:])
+        first_element = int(user_input[:a])
+        second_element = int(user_input[a+1:])
 
-    if second_element - first_element == 8:
-        x_list = list(range(first_element, second_element+1))
-        my_dict.update({"x": x_list})
-        print(my_dict)
-    else:
+        if second_element - first_element == 8:
+            x_list = list(range(first_element, second_element+1))
+            my_dict.update({"x": x_list})
+            print(my_dict)
+            break
+        else:
+            print("Your range is invalid.")
+    except:
         print("Your range is invalid.")
-except:
-    print("Your range is invalid.")
